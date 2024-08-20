@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\CommonPackageHandling.targets" />
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Description>LazyMagic Notifications DynamoDBRepo</Description>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\LazyMagic.DynamoDBRepo\LazyMagic.DynamoDBRepo.csproj" />
+	</ItemGroup>
+
+</Project>

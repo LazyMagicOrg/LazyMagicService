@@ -1,0 +1,18 @@
+<Project>
+  <ItemGroup>
+    <PackageVersion Include="Amazon.Lambda.APIGatewayEvents" Version="2.7.0" />
+    <PackageVersion Include="Amazon.Lambda.AspNetCoreServer" Version="8.1.1" />
+    <PackageVersion Include="Amazon.Lambda.Core" Version="2.2.0" />
+    <PackageVersion Include="Amazon.Lambda.Serialization.Json" Version="2.1.1" />
+    <PackageVersion Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.4.3" />
+    <PackageVersion Include="AWSSDK.ApiGatewayManagementApi" Version="3.7.300.84" />
+    <PackageVersion Include="AWSSDK.DynamoDBv2" Version="3.7.302.25" />
+    <PackageVersion Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.300" />
+    <PackageVersion Include="AWSSDK.SecurityToken" Version="3.7.300.18" />
+    <PackageVersion Include="LazyMagic.Shared" Version="0.9.0" />
+	<PackageVersion Include="LazyMagic.Shared.Notifications" Version="0.9.0" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageVersion Include="NLog" Version="5.2.4" />
+    <PackageVersion Include="System.IdentityModel.Tokens.Jwt" Version="7.5.1" />
+  </ItemGroup>
+</Project>

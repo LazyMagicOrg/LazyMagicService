@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.ControllerBase", "LazyMagic.Service.ControllerBase\LazyMagic.Service.ControllerBase.csproj", "{64A56EA1-4598-4D48-95B0-FCD2D3C9B23D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.DynamoDBRepo", "LazyMagic.Service.DynamoDBRepo\LazyMagic.Service.DynamoDBRepo.csproj", "{7DFCEAA5-3335-476D-9847-444129A2A7D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.Notifications.FromStreams", "LazyMagic.Service.Notifications.FromStreams\LazyMagic.Service.Notifications.FromStreams.csproj", "{3B45B15A-C7E4-468A-9925-176DF04A3401}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.Notifications.WebSocket", "LazyMagic.Service.Notifications.WebSocket\LazyMagic.Service.Notifications.WebSocket.csproj", "{CF7FCDDA-7320-4216-8326-BBE20BCD83A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36C9D1A0-1F33-4C1F-9B98-9BC6B727C068}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		CommonPackageHandling.targets = CommonPackageHandling.targets
+		Directory.Packages.props = Directory.Packages.props
+		LICENSE.txt = LICENSE.txt
+		NOTIFICATIONS.md = NOTIFICATIONS.md
+		.github\workflows\publish-nuget.yaml = .github\workflows\publish-nuget.yaml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.Notifications.WebSocketService", "LazyMagic.Service.Notifications.WebSocketService\LazyMagic.Service.Notifications.WebSocketService.csproj", "{892CA34A-E566-446C-B2D5-C0A5F10D93A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyMagic.Service.Authorization", "LazyMagic.Service.Authorization\LazyMagic.Service.Authorization.csproj", "{F6761D71-C8AE-48FF-92FB-C1B9FC5B953C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64A56EA1-4598-4D48-95B0-FCD2D3C9B23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A56EA1-4598-4D48-95B0-FCD2D3C9B23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A56EA1-4598-4D48-95B0-FCD2D3C9B23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A56EA1-4598-4D48-95B0-FCD2D3C9B23D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFCEAA5-3335-476D-9847-444129A2A7D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFCEAA5-3335-476D-9847-444129A2A7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFCEAA5-3335-476D-9847-444129A2A7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFCEAA5-3335-476D-9847-444129A2A7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B45B15A-C7E4-468A-9925-176DF04A3401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B45B15A-C7E4-468A-9925-176DF04A3401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B45B15A-C7E4-468A-9925-176DF04A3401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B45B15A-C7E4-468A-9925-176DF04A3401}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7FCDDA-7320-4216-8326-BBE20BCD83A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7FCDDA-7320-4216-8326-BBE20BCD83A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7FCDDA-7320-4216-8326-BBE20BCD83A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7FCDDA-7320-4216-8326-BBE20BCD83A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892CA34A-E566-446C-B2D5-C0A5F10D93A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892CA34A-E566-446C-B2D5-C0A5F10D93A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892CA34A-E566-446C-B2D5-C0A5F10D93A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892CA34A-E566-446C-B2D5-C0A5F10D93A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6761D71-C8AE-48FF-92FB-C1B9FC5B953C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6761D71-C8AE-48FF-92FB-C1B9FC5B953C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6761D71-C8AE-48FF-92FB-C1B9FC5B953C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6761D71-C8AE-48FF-92FB-C1B9FC5B953C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99319201-E81D-4906-8CD9-AE17662019F7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,66 @@
+<Project>
+
+  <!-- Common properties for package handling -->
+  <PropertyGroup>
+    <PackageRepoFolder>$(MSBuildThisFileDirectory)\Packages</PackageRepoFolder>
+	  <Copyright>Copyright (c) 2021,2024 Insight Sciences Corporation. All rights reserved.</Copyright>
+	  <PackageProjectUrl>https://LazyMagic.io</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/InSciCo/LazyMagicService</RepositoryUrl>
+	  <RepositoryType>GitHub</RepositoryType>
+	  <Company>Insight Sciences Corporation</Company>
+	  <Authors>Tim May, Thomas May</Authors>
+	  <Version>0.9.0</Version>
+	  <SignAssembly>false</SignAssembly>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <IncludeSymbols>true</IncludeSymbols>
+	  <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+
+	<Target Name="CopyPackageLicense" BeforeTargets="Clean">
+		<Copy SourceFiles="$(MSBuildThisFileDirectory)\LICENSE.txt" DestinationFiles="LICENSE.txt" />
+	</Target>
+
+	<ItemGroup>
+		<None Include="LICENSE.txt" Pack="True" PackagePath=""/>
+	</ItemGroup>
+
+	<!-- Copy Package Target -->
+	<Target Name="CopyPackage" AfterTargets="Pack">
+		<Message Importance="high" Text="Copying $(AssemblyName).$(Version).nupkg to Packages folder" />
+
+		<MakeDir Directories="$(PackageRepoFolder)" />
+		<Copy SourceFiles=".\bin\$(Configuration)\$(AssemblyName).$(Version).nupkg"
+			  DestinationFiles="$(PackageRepoFolder)\$(AssemblyName).$(Version).nupkg" />
+
+		<Copy Condition="Exists('.\bin\$(Configuration)\$(AssemblyName).$(Version).snupkg')"
+			  SourceFiles=".\bin\$(Configuration)\$(AssemblyName).$(Version).snupkg"
+			  DestinationFiles="$(PackageRepoFolder)\$(AssemblyName).$(Version).snupkg" />
+
+	</Target>	
+
+	<!-- Delete Package from local cache -->
+	<Target Name="DeletePackage" AfterTargets="Build">
+		<Exec Command="dotnet msbuild /t:DeleteSpecificPackage" />
+	</Target>
+
+	<Target Name="DeleteSpecificPackage">
+		<PropertyGroup>
+			<PackageFolder Condition=" '$(OS)' == 'Windows_NT' ">$(UserProfile)\.nuget\packages\$(AssemblyName)\$(Version)</PackageFolder>
+			<PackageFolder Condition=" '$(OS)' != 'Windows_NT' ">$(Home)/.nuget/packages\$(AssemblyName)\$(Version)</PackageFolder>
+		</PropertyGroup>
+
+		<Message Importance="high" Text="Deleting package $(AssemblyName) version $(Version) from cache folder $(PackageFolder)" />
+
+		<!-- Windows-specific delete command -->
+		<Exec
+			Condition=" '$(OS)' == 'Windows_NT' AND Exists('$(PackageCacheFolder)')"
+			Command="cmd.exe /c &quot;if exist &quot;$(PackageCacheFolder)&quot; rmdir /s /q &quot;$(PackageCacheFolder)&quot;&quot;"  />
+
+		<!-- Unix/Linux/Mac-specific delete command -->
+		<Exec
+			Condition=" '$(OS)' != 'Windows_NT'  AND Exists('$(PackageCacheFolder)')"
+			Command="rm -rf &quot;$(PackageCacheFolder)&quot;"  />
+	</Target>	
+	
+</Project>
