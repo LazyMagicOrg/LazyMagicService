@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<Import Project="..\CommonPackageHandling.targets" />
+	<Import Project="$(SolutionDir)CommonPackageHandling.targets" />
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<Description>LazyMagic Notifications FromStreams Lambda</Description>
