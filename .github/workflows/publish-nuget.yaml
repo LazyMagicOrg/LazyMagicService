@@ -41,7 +41,7 @@ jobs:
         </configuration>
         EOF
 
-        cat nuget.config
+        cat NuGet.Config
         
 
     - name: Restore dependencies
