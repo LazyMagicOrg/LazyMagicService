@@ -38,6 +38,14 @@ jobs:
               <add key="ClearTextPassword" value="${{ secrets.GITHUB_TOKEN }}" />
             </github>
           </packageSourceCredentials>
+          <packageSourceMapping>
+            <packageSource key="nuget.org">
+              <package pattern="*" />
+            </packageSource>
+            <packageSource key="github">
+              <package pattern="LazyMagic.*" />
+            </packageSource>
+          </packageSourceMapping>
         </configuration>
         EOF
 
