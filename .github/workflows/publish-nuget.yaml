@@ -22,8 +22,27 @@ jobs:
 
     - name: Create NuGet.Config
       run: |
-        dotnet nuget add source --username not-required --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name LazyMagicOrg "https://nuget.pkg.github.com/LazyMagicOrg/index.json"
-        cat 
+    - name: Configure NuGet
+      run: |
+        cat > nuget.config << EOF
+        <?xml version="1.0" encoding="utf-8"?>
+        <configuration>
+          <packageSources>
+            <clear />
+            <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+            <add key="github" value="https://nuget.pkg.github.com/LazyMagicOrg/index.json" />
+          </packageSources>
+          <packageSourceCredentials>
+            <github>
+              <add key="Username" value="USERNAME" />
+              <add key="ClearTextPassword" value="${{ secrets.GITHUB_TOKEN }}" />
+            </github>
+          </packageSourceCredentials>
+        </configuration>
+        EOF
+
+        cat nuget.config
+        
 
     - name: Restore dependencies
       run: dotnet restore
