@@ -22,7 +22,6 @@ jobs:
 
     - name: Create NuGet.Config
       run: |
-        dotnet nuget add source https://api.nuget.org/v3/index.json --name nuget.org
         dotnet nuget add source --username not-required --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name LazyMagicOrg "https://nuget.pkg.github.com/LazyMagicOrg/index.json"
         cat 
 
