@@ -24,7 +24,7 @@ jobs:
       run: |
     - name: Configure NuGet
       run: |
-        cat > nuget.config << EOF
+        cat > NuGet.Config << EOF
         <?xml version="1.0" encoding="utf-8"?>
         <configuration>
           <packageSources>
