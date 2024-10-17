@@ -4,12 +4,12 @@
   <PropertyGroup>
     <PackageRepoFolder>$(MSBuildThisFileDirectory)\Packages</PackageRepoFolder>
 	  <Copyright>Copyright (c) 2021,2024 Insight Sciences Corporation. All rights reserved.</Copyright>
-	  <PackageProjectUrl>https://LazyMagic.io</PackageProjectUrl>
-	  <RepositoryUrl>https://github.com/InSciCo/LazyMagicService</RepositoryUrl>
+	  <PackageProjectUrl>https://LazyMagic.org</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/LazyMagicOrg/LazyMagicService</RepositoryUrl>
 	  <RepositoryType>GitHub</RepositoryType>
 	  <Company>Insight Sciences Corporation</Company>
 	  <Authors>Tim May, Thomas May</Authors>
-	  <Version>0.9.0</Version>
+	  <Version>0.9.1</Version>
 	  <SignAssembly>false</SignAssembly>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <IncludeSymbols>true</IncludeSymbols>
