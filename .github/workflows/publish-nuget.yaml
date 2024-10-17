@@ -20,7 +20,8 @@ jobs:
       with:
         dotnet-version: '8.x' # Update to your .NET version
 
-
+    - name: Create NuGet.Config
+      run: |
     - name: Configure NuGet
       run: |
         cat > NuGet.Config << EOF
